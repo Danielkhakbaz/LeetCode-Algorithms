@@ -1,3 +1,9 @@
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+
+var trap = function(height) {
     const n = height.length;
     const maxLeft = Array(n).fill(0);
     const maxRight = Array(n).fill(0);
@@ -19,3 +25,4 @@
     }
     
     return sum;
+};
