@@ -31,7 +31,7 @@ var groupAnagrams = function(strs) {
         let array = new Array(26).fill(0);
 
         for (let ch of str) {
-            array[ch.charCodeAt("0") - "a".charCodeAt("0")]++;
+            array[ch.charCodeAt() - "a".charCodeAt()]++;
         }
 
         let key = array.join(",");
@@ -43,5 +43,5 @@ var groupAnagrams = function(strs) {
         }
     }
 
-    return Array.from(Object.values(hash))  
+    return Object.values(hash);
 };
