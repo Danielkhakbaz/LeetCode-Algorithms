@@ -28,7 +28,7 @@ var threeSum = function(nums) {
                 high--;
 
                 while (nums[low] === nums[low - 1]) low++;
-                while (nums[low] === nums[high + 1]) high--;
+                while (nums[high] === nums[high + 1]) high--;
             } else if (sum > 0) {
                 high--;
             } else {
