@@ -12,7 +12,7 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, targetSum) {
-    function findSum(node, sum=0, target) {
+    function findSum(node, sum=0) {
         if (!node) {
             return false;
         }
@@ -20,11 +20,11 @@ var hasPathSum = function(root, targetSum) {
         sum += node.val;
 
         if (!node.left && !node.right) {
-            return sum === target;
+            return sum === targetSum;
         }
 
-        return findSum(node.left, sum, targetSum) || findSum(node.right, sum, targetSum);
+        return findSum(node.left, sum) || findSum(node.right, sum);
     }
 
-    return findSum(root, 0, targetSum);
+    return findSum(root, 0);
 };
